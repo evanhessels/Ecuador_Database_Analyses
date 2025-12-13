@@ -5,7 +5,7 @@ library(spider)
 library(ape)
 library(tidyverse)
 
-Data <- read.dna("July 21. 25 93% sim geneious alignment - realigned muscle trimmed no sp - Final.fasta", format = "fasta")
+Data <- read.dna("Alignment.fasta", format = "fasta")
 barcodeDist <- ape::dist.dna(Data, model = "raw", pairwise.deletion = TRUE)
 
 # Clean Labels ------------------------------------------------------------
@@ -90,7 +90,7 @@ p1 <-ggplot(df_long, aes(x = Threshold, y = Count, fill = ErrorType)) +
 
 # Redo Analysis for Second Plot -------------------------------------------
 
-Data2 <- read.dna("July 21, 25 Final General Mini-Vert Alignment no SP.fasta", format = "fasta")
+Data2 <- read.dna("Alignment2.fasta", format = "fasta")
 barcodeDist2 <- ape::dist.dna(Data2, model = "raw", pairwise.deletion = TRUE)
 
 # Clean Labels ------------------------------------------------------------
